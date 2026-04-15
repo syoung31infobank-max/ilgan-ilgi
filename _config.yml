@@ -9,7 +9,7 @@ lang: ko-KR
 timezone: Asia/Seoul
 
 # 배포되면 아래를 본인 도메인 또는 github.io 주소로 바꾸세요
-url: "https://USERNAME.github.io"
+url: "https://syoung31infobank-max.github.io"
 baseurl: "/ilgan-ilgi"
 
 permalink: /:categories/:year/:month/:day/:title/
