@@ -1,0 +1,2 @@
+# 로컬에서 이미지 생성할 때만 필요해요 (generate_images.py 실행 시)
+google-generativeai>=0.8.0

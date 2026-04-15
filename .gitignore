@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+.env.local
+.DS_Store
+venv/
+.venv/
+node_modules/
+*.log
+posts/_drafts_local/
+images/_cache/

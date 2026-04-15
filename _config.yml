@@ -1,0 +1,67 @@
+title: 일간일기
+subtitle: 사주 일간과 MBTI로 나와 사람을 읽는 법
+description: >-
+  MBTI로는 잡히지 않던 결을 사주 일간으로 한 겹 더 읽어드려요.
+  30대 여성 화자가 공부한 명리학을 차분하게 풀어내는 노트.
+author: 일간일기
+email: syoung31.infobank@gmail.com
+lang: ko-KR
+timezone: Asia/Seoul
+
+# 배포되면 아래를 본인 도메인 또는 github.io 주소로 바꾸세요
+url: "https://USERNAME.github.io"
+baseurl: "/ilgan-ilgi"
+
+permalink: /:categories/:year/:month/:day/:title/
+paginate: 10
+paginate_path: "/page/:num/"
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - scripts/
+  - skill/
+  - requirements.txt
+  - SETUP.md
+  - README.md
+  - .github/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+
+# SEO / 공유
+logo: /assets/images/logo.png
+social:
+  name: 일간일기
+  links: []
+
+# 애드센스 (승인 후 ca-pub-XXXX 채우기)
+adsense:
+  client_id: ""   # 예: "ca-pub-1234567890123456"
+  slot_inarticle: ""  # 본문 광고 슬롯 ID
+
+# 카테고리 한글 슬러그 매핑 (선택)
+categories_slug:
+  "사주-MBTI": "사주 × MBTI"
+  "일간-궁합": "일간 궁합"
+  "일간-이야기": "일간 이야기"
+  "사주-기초-노트": "사주 기초 노트"

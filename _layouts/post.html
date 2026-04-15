@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    {% if page.categories %}
+    <div class="post-category">
+      {% for c in page.categories %}<span>{{ c }}</span>{% endfor %}
+    </div>
+    {% endif %}
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %-m월 %-d일" }}</time>
+      {% if page.read_time %} · {{ page.read_time }}분 읽기{% endif %}
+    </div>
+    {% if page.thumbnail %}
+    <img class="post-thumbnail" src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}">
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if site.adsense.client_id != "" and site.adsense.slot_inarticle != "" %}
+  <aside class="adsense">
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"
+         data-ad-client="{{ site.adsense.client_id }}"
+         data-ad-slot="{{ site.adsense.slot_inarticle }}"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </aside>
+  {% endif %}
+
+  <footer class="post-footer">
+    {% if page.tags %}
+    <div class="post-tags">
+      {% for t in page.tags %}<a href="{{ '/tags/' | append: t | relative_url }}">#{{ t }}</a>{% endfor %}
+    </div>
+    {% endif %}
+    <p class="post-disclaimer">
+      ※ 명리 해석은 경향성에 대한 참고예요. 단정이 아니라 한 겹 더 읽는 렌즈로 봐주세요.
+    </p>
+  </footer>
+</article>
+
+<nav class="post-nav">
+  {% if page.previous %}<a class="prev" href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>{% endif %}
+  {% if page.next %}<a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title }} →</a>{% endif %}
+</nav>

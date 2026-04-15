@@ -1,0 +1,9 @@
+# DEPRECATED: deploy.yml이 대체합니다.
+name: deprecated-publish
+on:
+  workflow_dispatch: {}
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "이 워크플로우는 더 이상 사용하지 않아요. deploy.yml을 보세요."

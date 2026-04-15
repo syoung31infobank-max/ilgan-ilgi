@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-brand">{{ site.title }} — {{ site.subtitle }}</p>
+    <p class="footer-meta">© {{ 'now' | date: "%Y" }} {{ site.author }}. 모든 해석은 경향성 참고용이에요.</p>
+    <p class="footer-links">
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      <span>·</span>
+      <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a>
+      <span>·</span>
+      <a href="{{ '/about/' | relative_url }}">소개</a>
+    </p>
+  </div>
+</footer>

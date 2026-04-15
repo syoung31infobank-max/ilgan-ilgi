@@ -1,0 +1,13 @@
+# 이 워크플로우는 비활성화되어 있어요.
+# Mac에서 Claude Code로 직접 글을 생성하는 방식으로 전환했어요.
+# 자세한 건 CLAUDE.md와 SETUP.md 참고.
+#
+# 나중에 자동화하고 싶으면 이 파일을 살려서 쓸 수 있게 남겨두었어요.
+name: disabled-generate
+on:
+  workflow_dispatch: {}  # 수동으로만, 그것도 아무 동작 안 함
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "이 워크플로우는 사용하지 않아요. Mac에서 claude 실행해서 글 쓰세요."
